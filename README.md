@@ -1,6 +1,6 @@
 # flask_webapp
 
-Simple web app to upload and parse xml files, extract gas prices and compute the mean for a given gaz.
+Simple web app to upload and parse xml files, extract gas prices and compute the mean for a given gas name.
 
 ## Getting started
 
