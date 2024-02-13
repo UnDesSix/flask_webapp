@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gas Prices</title>
+</head>
+<body>
+<h1>Technical Test</h1>
+<h2>Upload file</h2>
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <input type="submit" value="Upload">
+</form>
+
+<h2>Get mean price</h2>
+<form action="/mean_price" method="get">
+    <select name="gas_name">
+        {% for gas_name in gas_names %}
+        <option value="{{ gas_name[0] }}">{{ gas_name[0] }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Get Mean Price">
+</form>
+
+{% if mean_price is not none %}
+<h4>{{ gas_name }} mean price: {{ mean_price }}</h4>
+{% endif %}
+
+</body>
+</html>
